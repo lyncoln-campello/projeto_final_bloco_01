@@ -3,26 +3,27 @@ package controller;
 import java.util.ArrayList;
 
 import model.Doces;
+import repository.Repository;
 
-public class LojaController {
+public class LojaController implements Repository {
 
 	private ArrayList<Doces> listaDoces = new ArrayList<>();
 	int numero = 0;
 
-	
+	    @Override
 		public void adicionar(Doces doces) {
 			listaDoces.add(doces);
 			System.out.println("\nO doce de tipo " + doces.getTipoBolo() + " foi adicionado ao carrinho");
 		}
 
-		
+		@Override
 		public void listarTodas() {
 			for (var doces : listaDoces) {
 				doces.visualizar();
 			}
 		}
 
-		
+		@Override
 		public void atualizar(Doces doce) {
 			var buscaDoces = buscarNaCollection(doce.getTipoBolo());
 
@@ -34,7 +35,7 @@ public class LojaController {
 			}
 		}
 		
-		
+		@Override
 		public void excluir(int tipoBolo) {
 			var doces = buscarNaCollection(tipoBolo);
 			

@@ -25,7 +25,7 @@ public class MenuLoja {
 			System.out.println("            4 - Excluir item do Carrinho             ");
 			System.out.println("            9 - Sair                                 ");
 			System.out.println("*****************************************************");
-			System.out.println("Entre com a opção desejada: ");
+			System.out.println("Entre com a opção desejada:                          ");
 
 			opcao = leia.nextInt();
 

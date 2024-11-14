@@ -7,7 +7,7 @@ public class Bolo extends Doces {
 	public Bolo(int tipoBolo, int tamanho) {
 		super(tipoBolo);
 		this.tamanho = tamanho;
-		setPreco(preco(tamanho)); 
+		setPreco(preco(tamanho));
 	}
 
 	public int getTamanho() {
@@ -33,8 +33,21 @@ public class Bolo extends Doces {
 	}
 
 	public void visualizar() {
-		System.out.println("Sabor do bolo: " + getTipoBolo());
-		System.out.println("Tamanho: " + this.tamanho);
-		System.out.println("Preço: R$ " + getPreco());
+		switch (getTipoBolo()) {
+		case 1 ->System.out.println("Sabor do bolo: Chocolate");
+
+		case 2 -> System.out.println("Sabor do bolo: Baunilha");
+		
+		case 3 -> System.out.println("Sabor do bolo: Morango");
+		}
+		
+		switch (this.tamanho) {
+		case 1 -> System.out.println("  Tamanho: Pequeno");
+		case 2 -> System.out.println("  Tamanho: Médio");
+		case 3-> System.out.println("  Tamanho: Grande");
+		}
+		System.out.print("Preço: R$ " + getPreco());
+	
+		
 	}
 }
