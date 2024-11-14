@@ -2,13 +2,12 @@ package model;
 
 public abstract class Doces {
 
-	private int tamanho;
 	private int tipoBolo;
-	
-	public Doces(int tipoBolo ) {
+	private float preco;
+
+	public Doces(int tipoBolo) {
 		this.tipoBolo = tipoBolo;
 	}
-
 
 	public int getTipoBolo() {
 		return tipoBolo;
@@ -18,4 +17,13 @@ public abstract class Doces {
 		this.tipoBolo = tipoBolo;
 	}
 
-	
+	public float getPreco() {
+		return preco;
+	}
+
+	protected void setPreco(float preco) {
+		this.preco = preco;
+	}
+
+	public abstract void visualizar();
+}
