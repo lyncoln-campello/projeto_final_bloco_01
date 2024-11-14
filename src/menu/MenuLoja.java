@@ -6,8 +6,7 @@ import java.util.Scanner;
 public class MenuLoja {
 
 	public static void main(String[] args) {
-		int opcao;
-		String massa, recheio, cobertura;
+		int opcao, tipoBolo, tamanho;
 		Scanner leia = new Scanner(System.in);
 
 		while (true) {
@@ -40,34 +39,41 @@ public class MenuLoja {
 			switch (opcao) {
 			case 1:
 				System.out.println("Adicionar ao Carrinho\n\n");
-				System.out.println("Digite a Massa desejada: ");
+
+				System.out.println("Escolha o Sabor do Bolo: ");
+				System.out.println("1 - Chocolate");
+				System.out.println("2 - Baunilha");
+				System.out.println("3 - Morango");
+
+				System.out.println("Digite o bolo desejado: ");
 				leia.skip("\\R?");
-				massa = leia.nextLine();
-				
-				System.out.println("Digite o Recheio desejado: ");
+				tipoBolo = leia.nextInt();
+
+				System.out.println("Escolha o Tamanho do Bolo: ");
+				System.out.println("1 - Pequeno (R$30)");
+				System.out.println("2 - Médio (R$60)");
+				System.out.println("3 - Grande (R$90)");
+
+				System.out.println("Digite o  Tamanho do bolo: ");
 				leia.skip("\\R?");
-				recheio = leia.nextLine();
-				
-				System.out.println("Digite o Cobertura desejado: ");
-				leia.skip("\\R?");
-				recheio = leia.nextLine();
-				
-				 keyPress();
+				tamanho = leia.nextInt(); 
+
+				keyPress();
 				break;
 			case 2:
 				System.out.println("Listar produtos do Carrinho\n\n");
 
-				 keyPress();
+				keyPress();
 				break;
 			case 3:
 				System.out.println("Atualizar Produtos\n\n");
 
-				 keyPress();
+				keyPress();
 				break;
 			case 4:
 				System.out.println("Exclui item do Carrinho\n\n");
 
-				 keyPress();
+				keyPress();
 				break;
 			default:
 				System.out.println("\n\\nOpção Inválida!\\n\n");
